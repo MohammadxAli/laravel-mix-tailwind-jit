@@ -1,0 +1,38 @@
+{
+    "name": "laravel-mix-tailwindcss-jit-boilerplate",
+    "version": "1.0.0",
+    "description": "This is an example of how to use Laravel Mix with Tailwindcss JIT mode together using npm-run-all in watch mode.",
+    "main": "index.js",
+    "scripts": {
+        "dev": "npm-run-all development tailwind:build",
+        "development": "mix",
+        "watch": "npm-run-all --parallel watch:laravel-mix watch:tailwind",
+        "watch:laravel-mix": "mix watch",
+        "watch:tailwind": "tailwindcss -i ./resources/css/tailwind.css -o ./public/assets/css/tailwind.css --watch",
+        "hot": "npm-run-all --parallel hot:laravel-mix watch:tailwind",
+        "hot:laravel-mix": "mix watch --hot",
+        "prod": "npm-run-all prod:laravel-mix prod:tailwind",
+        "prod:laravel-mix": "mix --production",
+        "prod:tailwind": "tailwindcss -i ./resources/css/tailwind.css -o ./public/assets/css/tailwind.css"
+    },
+    "author": "Mohammad Ali Shahbazi",
+    "license": "ISC",
+    "dependencies": {},
+    "devDependencies": {
+        "autoprefixer": "^10.3.0",
+        "bootstrap": "^5.0.2",
+        "browser-sync": "^2.27.1",
+        "browser-sync-webpack-plugin": "^2.3.0",
+        "jquery": "^3.6.0",
+        "laravel-mix": "^6.0.25",
+        "nodemon": "^2.0.7",
+        "npm-run-all": "^4.1.5",
+        "postcss": "^8.3.5",
+        "postcss-cli": "^8.3.1",
+        "postcss-preset-env": "^6.7.0",
+        "resolve-url-loader": "^4.0.0",
+        "sass": "^1.35.2",
+        "sass-loader": "^12.1.0",
+        "tailwindcss": "^2.2.4"
+    }
+}
